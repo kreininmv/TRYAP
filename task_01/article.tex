@@ -1,0 +1,110 @@
+\documentclass[a4paper,14pt]{article} % тип документа
+%\documentclass[14pt]{extreport}
+\usepackage{extsizes} % Возможность сделать 14-й шрифт
+
+
+\usepackage{geometry} % Простой способ задавать поля
+\geometry{top=25mm}
+\geometry{bottom=35mm}
+\geometry{left=20mm}
+\geometry{right=20mm}
+
+\setcounter{section}{0}
+
+%%%Библиотеки
+%\usepackage[warn]{mathtext}
+%\usepackage[T2A]{fontenc} % кодировка
+\usepackage[utf8]{inputenc} % кодировка исходного текста
+\usepackage[english,russian]{babel} % локализация и переносы
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+\usepackage{wasysym}
+\usepackage{graphicx}%Вставка картинок правильная
+\usepackage{float}%"Плавающие" картинки
+\usepackage{wrapfig}%Обтекание фигур (таблиц, картинок и прочего)
+\usepackage{fancyhdr} %загрузим пакет
+\usepackage{lscape}
+\usepackage{xcolor}
+\usepackage{dsfont}
+%\usepackage{indentfirst}
+\usepackage[normalem]{ulem}
+\usepackage{hyperref}
+
+
+
+
+%%% DRAGON STUFF
+\usepackage{scalerel}
+\usepackage{mathtools}
+
+\DeclareMathOperator*{\myint}{\ThisStyle{\rotatebox{25}{$\SavedStyle\!\int\!\!\!$}}}
+
+\DeclareMathOperator*{\myoint}{\ThisStyle{\rotatebox{25}{$\SavedStyle\!\oint\!\!\!$}}}
+
+\usepackage{scalerel}
+\usepackage{graphicx}
+%%% END 
+
+%%%Конец библиотек
+
+%%%Настройка ссылок
+\hypersetup
+{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=blue
+}
+%%%Конец настройки ссылок
+
+
+%%%Настройка колонтитулы
+	\pagestyle{fancy}
+	\fancyhead{}
+	\fancyhead[L]{Домашнее задание}
+	\fancyhead[R]{Крейнин Матвей, группа Б05-005}
+	\fancyfoot{}
+    \fancyfoot[C]{\thepage}
+    \fancyfoot[R]{ТРЯП}
+%%%конец настройки колонтитулы
+
+
+
+\begin{document}
+%%%%Начало документа%%%%
+
+\section{Задание 1}
+\subsection{Задача 1}
+
+$\textbf{1.}0$ Нет, т.к. b $\notin \{1, 2, 3\}$ или же $1 \notin \{a, b\}$.
+\newline
+$\textbf{2.}$ $|A \times B| = |A| \cdot |B|$, т.к. мы можем выбрать |A| элементов из первого множества 
+и |B| элементов из второго множества, сл-но всего элементов в множестве $|A \times B|$ будет $|A| \cdot |B|$
+\newline
+$\textbf{3.}$ Это получится $\invdiameter$, т.к. пустое множество не содержит в себе элементов, а значит 
+и в множестве $\mathds{N} \times \invdiameter$ не будет элементов, сл-но оно пустое.
+
+\subsection{Задача 2}
+$\textbf{a)}$ Да, верно, т.к. пустое слово содержится в любом непустом множестве.
+\newline
+$\textbf{b)}$ Да, верно, т.к. пустое множество содержитс в непустом множестве.
+
+\subsection{Задача 3}
+Регулярное выражение: $X^{+}X^{+}$, т.к. у нас будут все слова в этом множестве вида $a^{n}a^{m}$, где $m, n \in \mathds{N}$ \& $m, n>1$
+
+\subsection{Задача 4}
+\textbf{а)} $a^{*}b^{*}(a|b)^{+}$ - 
+\newline
+\textbf{b)} $(b^{*}a^{*})$ ab $(b^{*}a^{*})$ Я исхожу, из доказанного регулярного выражения в пункте в), то есть $b^{*}a^{*}$ 
+\newline
+\textbf{в)} $b^{*}a^{*}$, в этом языке не может идти ни одной буквы b, после буквы a, иначе это слово содержит в себе подслово ab, сл-но оно состоит из нескольких (или нуля) подряд идущих букв b или нескольких (или нуля) подряд идущих букв a.
+Это и описывает заданное регулярное выражение.
+\subsection{Задача 5}
+$1.$ Предлагаю сначала доказать включение L в R, у нас нет слов, содержащих 3 букв b подряд в языке L, база, у нас есть только $\mathcal{E}, b, bb$, база доказана таких слов нет.
+Теперь предположим, что их нет и на n-1, составлении при помощи правила 2, тогда при составлении слова на n шаге, мы можем составить слово из букв ax, bax и bbax, но в x нет последовательности 
+из 3-х подряд b, а при составлении не возникает трех подряд идущих b, т.к. их от других b отделяет буква a. 
+
+Теперь нужно доказать, что из языка L можно составить любое слово, не содержащее
+
+\end{document}
