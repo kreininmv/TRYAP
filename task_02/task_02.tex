@@ -1,0 +1,122 @@
+\documentclass[a4paper,14pt]{article} % тип документа
+%\documentclass[14pt]{extreport}
+\usepackage{extsizes} % Возможность сделать 14-й шрифт
+
+
+\usepackage{geometry} % Простой способ задавать поля
+\geometry{top=25mm}
+\geometry{bottom=35mm}
+\geometry{left=20mm}
+\geometry{right=20mm}
+
+\setcounter{section}{0}
+
+%%%Библиотеки
+%\usepackage[warn]{mathtext}
+%\usepackage[T2A]{fontenc} % кодировка
+\usepackage[utf8]{inputenc} % кодировка исходного текста
+\usepackage[english,russian]{babel} % локализация и переносы
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+\usepackage{wasysym}
+\usepackage{graphicx}%Вставка картинок правильная
+\usepackage{float}%"Плавающие" картинки
+\usepackage{wrapfig}%Обтекание фигур (таблиц, картинок и прочего)
+\usepackage{fancyhdr} %загрузим пакет
+\usepackage{lscape}
+\usepackage{xcolor}
+\usepackage{dsfont}
+%\usepackage{indentfirst}
+\usepackage[normalem]{ulem}
+\usepackage{hyperref}
+
+
+
+
+%%% DRAGON STUFF
+\usepackage{scalerel}
+\usepackage{mathtools}
+
+\DeclareMathOperator*{\myint}{\ThisStyle{\rotatebox{25}{$\SavedStyle\!\int\!\!\!$}}}
+
+\DeclareMathOperator*{\myoint}{\ThisStyle{\rotatebox{25}{$\SavedStyle\!\oint\!\!\!$}}}
+
+\usepackage{scalerel}
+\usepackage{graphicx}
+%%% END 
+
+%%%Конец библиотек
+
+%%%Настройка ссылок
+\hypersetup
+{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=blue
+}
+%%%Конец настройки ссылок
+
+
+%%%Настройка колонтитулы
+	\pagestyle{fancy}
+	\fancyhead{}
+	\fancyhead[L]{Домашнее задание}
+	\fancyhead[R]{Крейнин Матвей, группа Б05-005}
+	\fancyfoot{}
+    \fancyfoot[C]{\thepage}
+    \fancyfoot[R]{ТРЯП}
+%%%конец настройки колонтитулы
+
+
+
+\begin{document}
+%%%%Начало документа%%%%
+
+\section{Задание 2}
+\subsection{Задача 1}
+
+$\textbf{1.}$ R = $(bb|b|\mathcal{E})$$(a^{+}(bb|b|\mathcal{E}))^{*}$
+Теперь доказательство корректности регулярного выражения, пусть n = 1, для слова a, регялрное выражение считается корректно, в $(bb|b|\mathcal{E})$ будет $\mathcal{E}$
+потом считается a из $a^{+}$ потом считается $\mathcal{E}$ и на этом закончится (для слова b получается почти аналогично), для aa, ab, bb, ba - всё очевидно, в первом случае считается две буквы а из второго скобки, для ab считается a потом b из второй скобки, для bb считается две буквы b из первой скобки, для ba считается буква b из первой скобки, потом буква a из второй.
+База доказана
+
+Предположим, что это верно для слова длины n, тогда рассмотрим слово длины n+1.
+n > 2. Тогда получается, что первая скобка считалась. У нас слово длины n при добавлении буквы а может оканчиваться на любую букву, считывании произойдёт, т.к. во второй скобке считается просто еще одна буква a.
+В случае же приписывании буквы b слово длины n может оканчиваться на букву a, либо на одну b. В случае буквы a считается эта буква во второй скобке, в случае b произойдет считывание двух букв b, вместо одной буквы b.
+Т.к. до этого по индукции было предположено, что трех подряд букв нет. То и в новом построенном слове такой буквы не будет. Если же слово длины n будет оканчиваться на две буквы bb и новая буква b, то РВ R его не считает, т.к. в указанном регулярном выражении не может быть трех букв b подряд, их разделяет хотя бы одна буква a.  
+
+\subsection{Задача 2}
+$\textbf{1.}$ Автомат $\mathcal{A}$: $Q = \{q_0, q_1, q_2\}$, $\Sigma = \{0, 1\}$, $q_0 = q_0$, F = $q_1$
+\begin{tabular}{ | l | l | l | }
+    \hline
+    $\delta:$ & 0       & 1     \\ \hline
+    $q_0$ & $q_0$   & $q_1$ \\
+    $q_1$ & $q_2$   & $q_0$ \\
+    $q_2$ & $q_1$   & $q_2$ \\
+    \hline
+    \end{tabular}
+
+\vspace{10mm}
+
+Автомат $\mathcal{B}$: $Q = \{q_0, q_1, q_2\}$, $\Sigma = \{0, 1\}$, $q_0 = q_0$, F = $q_1$
+\begin{tabular}{ | l | l | l | }
+    \hline
+    $\delta:$ & 0       & 1             \\ \hline
+    $q_0$ & $q_0$       & $q_1$         \\
+    $q_1$ & $q_2, q_0$  & не определен  \\
+    $q_2$ & $q_1$       & $q_2$         \\
+    \hline
+    \end{tabular}
+
+\newpage
+$\textbf{2.}$ Автомат $\mathcal{A}$ является детерменированным, это видно из таблицы переходов, т.к. там однозначно определен из каждого состояния в каждое.
+
+Автомат $\mathcal{B}$ не является детерменированным, т.к. у него не определен однозначно переход из состояния $q_1$ по букве 0 (может быть $q_2$, а может быть $q_0$), переход по букве 1 вообще не определен.
+
+$\textbf{3.}$ При старте автомат $\mathcal{A}$ находится в состояние $q_0$. По букве 0 автомат останется в состоянии $q_0$, по букве 1 автомат перейдёт в состояние $q_1$, по букве 1 перейдёт обратно в состояние $q_0$,
+по букве 0 и 0 останется в состоянии $q_0$, потом по букве 1 перейдёт в состоянии $q_1$. Состояние $q_1$ является принимающим состоянием, поэтому слово $\omega \in \mathcal{L(A)}.=$
+
+$\textbf{4.}$
+\end{document}
