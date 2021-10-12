@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.6.22)  11 OCT 2021 22:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.6.22)  12 OCT 2021 20:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -751,61 +751,62 @@ Overfull \hbox (19.39656pt too wide) in paragraph at lines 113--135
 [][] 
  []
 
-<01.png, id=24, 442.0515pt x 214.401pt>
+<01.png, id=36, 442.0515pt x 214.401pt>
 File: 01.png Graphic file (type png)
 <use 01.png>
 Package pdftex.def Info: 01.png  used on input line 147.
 (pdftex.def)             Requested size: 442.05042pt x 214.40047pt.
 [1{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-]
-<05.png, id=40, 478.1865pt x 206.57175pt>
+] [2 <w:/MIPT/3_sem/TRYAP/task_06/01.png>]
+<05.png, id=62, 478.1865pt x 206.57175pt>
 File: 05.png Graphic file (type png)
 <use 05.png>
-Package pdftex.def Info: 05.png  used on input line 153.
+Package pdftex.def Info: 05.png  used on input line 206.
 (pdftex.def)             Requested size: 334.72826pt x 144.59923pt.
-<03.png, id=41, 460.119pt x 308.95425pt>
+ [3]
+<03.png, id=69, 460.119pt x 308.95425pt>
 File: 03.png Graphic file (type png)
 <use 03.png>
-Package pdftex.def Info: 03.png  used on input line 157.
+Package pdftex.def Info: 03.png  used on input line 210.
 (pdftex.def)             Requested size: 322.0811pt x 216.2665pt.
-<04.png, id=42, 460.119pt x 308.95425pt>
+<04.png, id=70, 460.119pt x 308.95425pt>
 File: 04.png Graphic file (type png)
 <use 04.png>
-Package pdftex.def Info: 04.png  used on input line 161.
+Package pdftex.def Info: 04.png  used on input line 214.
 (pdftex.def)             Requested size: 322.0811pt x 216.2665pt.
- [2 <w:/MIPT/3_sem/TRYAP/task_06/01.png> <w:/MIPT/3_sem/TRYAP/task_06/05.png> <w:/MIPT/3_sem/TRYAP/task_06/03.png>]
-<02.png, id=47, 460.119pt x 148.75575pt>
+ [4 <w:/MIPT/3_sem/TRYAP/task_06/05.png> <w:/MIPT/3_sem/TRYAP/task_06/03.png> <w:/MIPT/3_sem/TRYAP/task_06/04.png>]
+<02.png, id=75, 460.119pt x 148.75575pt>
 File: 02.png Graphic file (type png)
 <use 02.png>
-Package pdftex.def Info: 02.png  used on input line 189.
+Package pdftex.def Info: 02.png  used on input line 239.
 (pdftex.def)             Requested size: 460.11787pt x 148.75537pt.
- [3 <w:/MIPT/3_sem/TRYAP/task_06/04.png> <w:/MIPT/3_sem/TRYAP/task_06/02.png>]
-
-LaTeX Warning: Command \cyrt invalid in math mode on input line 200.
 
 
-LaTeX Warning: Command \cyro invalid in math mode on input line 200.
+LaTeX Warning: Command \cyrt invalid in math mode on input line 250.
+
+
+LaTeX Warning: Command \cyro invalid in math mode on input line 250.
 
 Missing character: There is no ò in font cmr12!
 Missing character: There is no î in font cmr12!
-[4] (w:/MIPT/3_sem/TRYAP/task_06/task_06.aux)
+[5 <w:/MIPT/3_sem/TRYAP/task_06/02.png>] (w:/MIPT/3_sem/TRYAP/task_06/task_06.aux)
 Package rerunfilecheck Info: File `task_06.out' has not changed.
-(rerunfilecheck)             Checksum: 70CE00F7C25A297C61A137C4F340EB13;547.
+(rerunfilecheck)             Checksum: 3E9522AE6FDE9C44AD44D604817116D1;938.
  ) 
 Here is how much of TeX's memory you used:
- 15915 strings out of 479304
- 229616 string characters out of 5871219
- 574578 words of memory out of 5000000
- 32859 multiletter control sequences out of 15000+600000
- 411650 words of font info for 48 fonts, out of 8000000 for 9000
+ 15927 strings out of 479304
+ 229755 string characters out of 5871219
+ 574580 words of memory out of 5000000
+ 32863 multiletter control sequences out of 15000+600000
+ 412468 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,12n,74p,426b,357s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb>
-Output written on w:/MIPT/3_sem/TRYAP/task_06/task_06.pdf (4 pages, 179770 bytes).
+ 71i,12n,74p,476b,359s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb>
+Output written on w:/MIPT/3_sem/TRYAP/task_06/task_06.pdf (5 pages, 192551 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 131 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
+ 20 named destinations out of 1000 (max. 500000)
+ 90 words of extra memory for PDF output out of 10000 (max. 10000000)
 
