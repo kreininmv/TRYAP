@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1634061242 "w:/MIPT/3_sem/TRYAP/task_06/task_06.tex" "w:/MIPT/3_sem/TRYAP/task_06/task_06.pdf" "task_06" 1634061245
+["pdflatex"] 1634061242 "w:/MIPT/3_sem/TRYAP/task_06/task_06.tex" "w:/MIPT/3_sem/TRYAP/task_06/task_06.pdf" "task_06" 1634065000
   "01.png" 1633876076 9677 dc1ef52cc698f00fcefa85d36a631d39 ""
   "02.png" 1633878523 7371 ccd222f18674741180e60313150dc645 ""
   "03.png" 1633881090 18283 8aab42dffd21dc28da754a09c56c58c7 ""
@@ -134,9 +134,9 @@
   "w:/MIPT/3_sem/TRYAP/task_06/task_06.aux" 1634061244 1746 58928d39a4f185a432f8c183151df963 ""
   "w:/MIPT/3_sem/TRYAP/task_06/task_06.tex" 1634061240 16643 dfa995bb3085a11fc7fb7cf128b76c8a ""
   (generated)
-  "task_06.pdf"
-  "task_06.out"
-  "w:/MIPT/3_sem/TRYAP/task_06/task_06.log"
-  "task_06.aux"
   "w:/MIPT/3_sem/TRYAP/task_06/task_06.pdf"
   "task_06.log"
+  "task_06.aux"
+  "task_06.pdf"
+  "w:/MIPT/3_sem/TRYAP/task_06/task_06.log"
+  "task_06.out"
