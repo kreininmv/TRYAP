@@ -1,0 +1,246 @@
+\documentclass[a4paper,14pt]{article} % тип документа
+%\documentclass[14pt]{extreport}
+\usepackage{extsizes} % Возможность сделать 14-й шрифт
+
+
+\usepackage{geometry} % Простой способ задавать поля
+\geometry{top=20mm}
+\geometry{bottom=25mm}
+\geometry{left=15mm}
+\geometry{right=15mm}
+
+\setcounter{section}{0}
+
+%%%Библиотеки
+%\usepackage[warn]{mathtext}
+%\usepackage[T2A]{fontenc} % кодировка
+\usepackage[utf8]{inputenc} % кодировка исходного текста
+\usepackage[english,russian]{babel} % локализация и переносы
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+\usepackage{wasysym}
+\usepackage{graphicx}%Вставка картинок правильная
+\usepackage{float}%"Плавающие" картинки
+\usepackage{wrapfig}%Обтекание фигур (таблиц, картинок и прочего)
+\usepackage{fancyhdr} %загрузим пакет
+\usepackage{lscape}
+\usepackage{xcolor}
+\usepackage{dsfont}
+%\usepackage{indentfirst}
+\usepackage[normalem]{ulem}
+\usepackage{hyperref}
+
+
+
+
+%%% DRAGON STUFF
+\usepackage{scalerel}
+\usepackage{mathtools}
+
+\DeclareMathOperator*{\myint}{\ThisStyle{\rotatebox{25}{$\SavedStyle\!\int\!\!\!$}}}
+
+\DeclareMathOperator*{\myoint}{\ThisStyle{\rotatebox{25}{$\SavedStyle\!\oint\!\!\!$}}}
+
+\usepackage{scalerel}
+\usepackage{graphicx}
+%%% END 
+
+%%%Конец библиотек
+
+\newcommand{\drawsome}[1]{            % Для быстрой вставки картинок
+    \begin{figure}[h!]
+            \centering
+            \includegraphics[scale=0.7]{#1}
+            \label{fig:first}
+    \end{figure}
+}
+\newcommand{\drawsomemedium}[1]{
+    \begin{figure}[h!]
+            \centering
+            \includegraphics[scale=0.45]{#1}
+            \label{fig:first}
+    \end{figure}
+}
+\newcommand{\drawsomesmall}[1]{
+    \begin{figure}[h!]
+            \centering
+            \includegraphics[scale=0.3]{#1}
+            \label{fig:first}
+    \end{figure}
+}
+
+%%%Настройка ссылок
+\hypersetup
+{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=blue
+}
+%%%Конец настройки ссылок
+
+
+%%%Настройка колонтитулы
+	\pagestyle{fancy}
+	\fancyhead{}
+	\fancyhead[L]{Домашнее задание}
+	\fancyhead[R]{Крейнин Матвей, группа Б05--005}
+	\fancyfoot{}
+    \fancyfoot[C]{\thepage}
+    \fancyfoot[R]{ТРЯП}
+%%%конец настройки колонтитулы
+
+
+\begin{document}
+%%%%Начало документа%%%%
+
+\section{Задание 10}
+\subsection{Задача 1}
+\textbf{а)}
+\underline{Ответ:} Не является LL(k)-грамматикой при любом k
+\begin{enumerate}
+    \item $S \longrightarrow^*_l Aa^kb \longrightarrow_l a^{k+1}b, \omega = \varepsilon, \alpha = a^kb, \beta = a$
+    \item $S \longrightarrow^*_l Aa^kb \longrightarrow_l Aa^{k+1}b, \omega = \varepsilon, \alpha = a^kb, \gamma = Aa$
+\end{enumerate}
+$FIRST_k(\beta \alpha) \cup FIRST_k(\gamma \alpha) \neq \emptyset$ для любого k.
+\newline
+\textbf{б)} \underline{Ответ:} Является LL(k)-грамматикой при $k \geqslant 2$.
+\begin{enumerate}
+    \item $S \longrightarrow^*_l a^kAb \longrightarrow_l a^{k}ab, \omega = a^k, \alpha = b, \beta = a$
+    \item $S \longrightarrow^*_l a^kAb \longrightarrow_l a^kaAb, \omega = a^k, \alpha = b, \gamma = aA$
+\end{enumerate}
+$FIRST_k(\beta \alpha) \cup FIRST_k(\gamma \alpha) = \emptyset$  $k \geqslant 2$.
+\newline
+\textbf{в)} \underline{Ответ:} Не является LL(k)-грамматикой для любого k.
+\begin{enumerate}
+    \item $S \longrightarrow^*_l aBBb \longrightarrow_l aabBb, \omega = a, \alpha = Bb, \beta = ab$
+    \item $S \longrightarrow^*_l aBBb \longrightarrow_l a \varepsilon Bb, \omega = a, \alpha = Bb, \gamma = \varepsilon$
+\end{enumerate}
+Используя индукцию по k получим, что $FIRST_k(\beta \alpha) \cup FIRST_k(\gamma \alpha) \neq \emptyset$, при $k = 1$ и $k = 2$ возьмём $B \longrightarrow ab$; при $k \geqslant 3$, возьмём $B \longrightarrow \varepsilon$ в первом и случае и $B \longrightarrow ab во втором$:
+\newline
+$FIRST_k(abBb) \cup FIRST_k(Bb) \neq \emptyset$, Грамматика не является LL(k для любого k
+\newline
+\textbf{г)} \underline{Ответ:} Не является LL(k)-грамматикой для любого k
+\begin{enumerate}
+    \item $S \longrightarrow^*_l aaBB \longrightarrow_l aaaBBB, \omega = aa, \alpha = B, \beta = aBB$
+    \item $S \longrightarrow^*_l aaBB \longrightarrow_l aabB, \omega = aa, \alpha = B, \gamma = b$
+\end{enumerate}
+$FIRST_k(\beta \alpha) \cup FIRST_k(\gamma \alpha) \neq \emptyset$, т.к. содержит $\omega = a^k$. Поэтому грамматика не будет LL(k)-грамматикой для любого k.
+\newline
+\textbf{д)} \underline{Ответ:} Является LL(k)-грамматикой для любого k.
+\begin{enumerate}
+    \item $S \longrightarrow^*_l aaBB \longrightarrow_l aaaBBB, \omega = aa, \alpha = B, \beta = aBB$
+    \item $S \longrightarrow^*_l aaBB \longrightarrow_l aabB, \omega = aa, \alpha = B, \gamma = b$
+\end{enumerate}
+Видно, что $FIRST_k(\beta \alpha) \cup FIRST_k(\gamma \alpha) = \emptyset$, поэтому это LL(k)-грамматика.
+
+\subsection{Задача 2}
+Получим грамматику: $S \rightarrow Ab, A \rightarrow aA^{'}, A^{'} \rightarrow a | \varepsilon$, воспользовавашись алгоритмом удаления правого ветвления.
+
+
+\begin{tabular}{|l|lll|lll|}
+    \hline
+         & \multicolumn{3}{l|}{FIRST(X)}                                                                                                 & \multicolumn{3}{l|}{FOLLOW(X)}                                                                     \\ \hline
+    $X  $ & \multicolumn{1}{l|}{S}                        & \multicolumn{1}{l|}{A}                        & $A^{'}$      & \multicolumn{1}{l|}{S}  & \multicolumn{1}{l|}{A}           & $A^{'}$ \\ \hline
+    $F_0$ & \multicolumn{1}{l|}{$\emptyset$} & \multicolumn{1}{l|}{$\emptyset$} & $\emptyset$      & \multicolumn{1}{l|}{\$} & \multicolumn{1}{l|}{$\emptyset$} & $\emptyset$ \\ \hline
+    $F_1$ & \multicolumn{1}{l|}{a}                        & \multicolumn{1}{l|}{a}                        & a, $\varepsilon$ & \multicolumn{1}{l|}{\$} & \multicolumn{1}{l|}{b}                        & $\emptyset$ \\ \hline
+    $F_2$ & \multicolumn{1}{l|}{a}                        & \multicolumn{1}{l|}{a}                        & a, $\varepsilon$ & \multicolumn{1}{l|}{\$} & \multicolumn{1}{l|}{b}                        & b                        \\ \hline
+\end{tabular}
+\newline
+Используем алгоритм построения анализатора:
+
+
+
+\begin{tabular}{|l|l|l|l|}
+    \hline
+       & a                    & b                        & \$    \\ \hline
+    S  & $S \longrightarrow Ab   $ & error                    & error \\ \hline
+    A  & $A \longrightarrow aA^{'}$ & error                    & error \\ \hline
+    $A^{'}$ & $A^{'} \longrightarrow a  $ & $A^{'} \longrightarrow \varepsilon$ & error \\ \hline
+\end{tabular}
+\newline
+Получим LL(k)-грамматику, т.к. в каждой ячейку получилось записано не больше одного правила.
+
+\subsection{Задача 3}
+Используем алгоритм удаления левой рекурссии:
+\newline
+$S \longrightarrow baaA | bab A$
+\newline
+$A \longrightarrow aA | bA | a | b$
+\newline 
+Удалим правое ветвление:
+\newline
+$S \longrightarrow baS^{'}$
+\newline
+$S^{'} \longrightarrow aA | bA$
+\newline
+$A \longrightarrow aA | bA | \varepsilon$
+\newline
+Строим таблицу FIRST и FOLLOW:
+
+
+\begin{tabular}{|l|lll|lll|}
+    \hline
+          & \multicolumn{3}{l|}{FIRST(X)}                                                                                                 & \multicolumn{3}{l|}{FOLLOW(X)}                                                                     \\ \hline
+    $X  $ & \multicolumn{1}{l|}{S}           & \multicolumn{1}{l|}{$S^{'}$}     & $A$                 & \multicolumn{1}{l|}{S}  & \multicolumn{1}{l|}{$S^{'}$}     & $A$         \\ \hline
+    $F_0$ & \multicolumn{1}{l|}{$\emptyset$} & \multicolumn{1}{l|}{$\emptyset$} & $\emptyset$         & \multicolumn{1}{l|}{\$} & \multicolumn{1}{l|}{$\emptyset$} & $\emptyset$ \\ \hline
+    $F_1$ & \multicolumn{1}{l|}{b}           & \multicolumn{1}{l|}{a, b}        & a, b, $\varepsilon$ & \multicolumn{1}{l|}{\$} & \multicolumn{1}{l|}{\$}          & $\emptyset$ \\ \hline
+    $F_2$ & \multicolumn{1}{l|}{b}           & \multicolumn{1}{l|}{a, b}        & a, b, $\varepsilon$ & \multicolumn{1}{l|}{\$} & \multicolumn{1}{l|}{\$}          & \$          \\ \hline
+\end{tabular}
+\newline
+Построим анализатор:
+
+
+\begin{tabular}{|l|l|l|l|}
+    \hline
+             & a                           & b                           & \$    \\ \hline
+    S        & error                       & $S \longrightarrow baS^{'}$ & error \\ \hline
+    $S^{'}$  & $S^{'} \longrightarrow aA$  & $S^{'} \longrightarrow bA$  & error \\ \hline
+    A        & $A \longrightarrow aA  $    & $A \longrightarrow bA$      & $A \longrightarrow \varepsilon$ \\ \hline
+\end{tabular}
+\newline
+Продемнострируем работа анализатора на слове baab:
+$S \longrightarrow baS^{'} \longrightarrow baaA \longrightarrow baab$
+
+\subsection{Задача 5}
+Видно, что это грамматика языка Дика. А язык Дика задаётся грамматикой:
+$S \longrightarrow (S)S | \varepsilon$
+\newline Получили мы эту грамматику, используя алгоритм удаления левой рекурсии и правого ветвления.
+\begin{enumerate}
+    \item $S \longrightarrow^*_l (S)S \longrightarrow_l ((S)S)S, \omega = (, \alpha = )S, \beta = (S)S $
+    \item $S \longrightarrow^*_l (S)S \longrightarrow_l (\varepsilon)S, \omega = (, \alpha =)S, \gamma = \varepsilon$
+\end{enumerate}
+$FIRST_1[(S)S)S] \cup FIRST_1[)S] = \emptyset$, $FIRST_1[S] \cup FOLLOW_1[S] = \emptyset$
+Видно, что после S может быть только <<)>>, поэтому последнее равенство верно.
+
+\subsection{Задача 6}
+Пусть у нас есть праволинейная грамматика: $G = \langle \{S, A, B\}, \{a, b, \$ \}, P, S\rangle$, где P: $S \longrightarrow A, A \longrightarrow ba | b$
+\newline
+Это не будет LL(1)-грамматикой, т.к. нет правил с $\varepsilon$:
+$FIRST_1(ba) \cup FIRST_1(b) = {b} \neq \emptyset$
+\subsection{Задача 7}
+\underline{Ответ:} Да, верно.
+\newline
+$G = \langle \{S, A, B\}, \{a, b, \$ \}, P, S \rangle$, P: $S \longrightarrow AB, A \longrightarrow \varepsilon, B \longrightarrow \varepsilon$
+\newline
+Построим анализатор (очевидно, что таблица first и follow будет содержать только $\varepsilon$ и \$ соотвественно):
+
+
+\begin{tabular}{|l|l|l|l|}
+    \hline
+       & a     & b     & \$                              \\ \hline
+    S  & error & error & $S \longrightarrow AB$          \\ \hline
+    A  & error & error & $A \longrightarrow \varepsilon$ \\ \hline
+    B  & error & error & $B \longrightarrow \varepsilon$ \\ \hline
+\end{tabular}
+\newline
+Видим, что каждой ячейке таблицы соотвествует не больше одного правила вывода, из чего делаем вывод, что грамматика является LL(1)-грамматикой.
+\subsection{Задача 8}
+\underline{Ответ:} Нет, неверно.
+\newline
+Рассмотрим грамматику $G = \langle \{S, A, B\}, \{a, b, \$\}, P, S\rangle$, где P: $S \longrightarrow AB, A \longrightarrow \varepsilon, B \longrightarrow \varepsilon$
+\newline
+Видно, что $FOLLOW(A) \cup FOLLOW(B) = \{ \$ \}$, но грамматика G является LL(1)-грамматикой, было доказано в предыдущей задаче.
+
+\end{document}
